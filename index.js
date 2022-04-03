@@ -36,7 +36,7 @@ http.createServer((req,res) => {
 }).listen(port);
 console.log(`Our server is listening on port number: ${port}`);
 
-const customReadFile = (file_path,res) => { // reads file and build page 
+const customReadFile = (file_path,res) => { // reads file requested and builds page 
     if(fs.existsSync(file_path)) {
         fs.readFile(file_path, (error,data) => {
             if(error){
